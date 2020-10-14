@@ -1,0 +1,12 @@
+extends ./../layout/_base
+
+block content
+  main.main
+    .error
+      .error__title
+        h2 Uh oh! 🤯 
+        h2 Something went wrong!   
+
+      //- 'msg' is locals from sendErrorDev function in errorController.js
+      .error__msg=msg 
+        | 😢 

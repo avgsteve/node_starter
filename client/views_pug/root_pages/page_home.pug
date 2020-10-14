@@ -1,0 +1,44 @@
+//- This file gets basic template from base.pug by "extends" and rewrite//
+extends ./../layout/_base
+
+
+//- block content is from _base.pug and will be replaced by the block content in this file
+block content
+
+  h1 H1
+  h2 H2
+  h3 h3
+  h4 h4
+  p test paragraph
+  span Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tenetur explicabo sequi laborum alias ea iste et accusantium at, non consequatur culpa, labore eos maiores saepe nisi, sapiente exercitationem cum?
+
+  //- Pug Template Code
+  // Using Bootstrap classes
+  .btn_container.mt-5
+
+    .btn-group.btn-group-toggle.mr-5(data-toggle='buttons')
+      label.btn.btn-secondary.active.show_alert
+        input#option1(type='radio' name='options' checked='')
+        |  Show Alert
+
+    .btn-group.btn-group-toggle(data-toggle='buttons')
+      label.btn.btn-secondary.active.show_alert2
+        input#option1(type='radio' name='options' checked='')
+        |  Show Alert 2      
+
+
+  //- Native HTML Code
+  <div class="alert__test alert alert-success alert-dismissible" role="alert" style="display:none;">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+  <div class="alert__test2 alert alert-success" role="alert" style="display:none;">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
