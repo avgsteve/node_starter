@@ -1,0 +1,18 @@
+// use .env file to set environment variable
+// do not commit .env to github or make it public
+
+NODE_ENV=development
+
+PORT=3000
+
+DATABASE_URI=
+
+SESSION_COOKIE_SECRET=randomSessionCoOkiESECret
+
+JWT_SECRET=
+JWT_EXPIRES_IN=90d
+# 90d means 90 days
+# JWT_EXPIRES_IN=5000
+# 5000 means 5000 milliseconds
+
+JWT_COOKIE_EXPIRES_IN=1000

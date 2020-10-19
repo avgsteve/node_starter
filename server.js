@@ -20,7 +20,11 @@ const server = app.listen(port, () => {
   console.log(
     `  Server is listening to port:${ port }` +
     "\x1b[0m",
-    " Mode:", process.env.NODE_ENV, '\n');
+    " Mode:", process.env.NODE_ENV);
+
+  if (!process.env.NODE_ENV) console.log(`
+    process.env.NODE_ENV is not found. 
+    Please check .env file or environment variable config`);
 
   // Database conntection starting log
   () => setTimeout(() => {
